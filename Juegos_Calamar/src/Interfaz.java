@@ -8,12 +8,19 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.io.File;
+
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.CardLayout;
 
 public class Interfaz extends JFrame {
 
-	private JPanel contentPane;
+	private BackgroundPanel contentPane;
+	
 
 	/**
 	 * Launch the application.
@@ -31,7 +38,6 @@ public class Interfaz extends JFrame {
 		});
 	}
 
-	/* Bue n da */
 	/**
 	 * Create the frame.
 	 */
@@ -39,14 +45,27 @@ public class Interfaz extends JFrame {
 		setTitle(" ");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 621, 574);
-		contentPane = new JPanel();
+		try {
+			contentPane = new BackgroundPanel(javax.imageio.ImageIO.read(new File(getClass().getResource("resources/squidgamebg.jpg").getPath())));
+		} catch(Exception e) {
+			System.out.println(e);
+		}
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JButton btnJugar = new JButton("JUGAR");
+		btnJugar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Juego1 juego1=new Juego1();
+				juego1.setVisible(true);
+				
+				
+			}
+		});
+		btnJugar.setBounds(267, 329, 89, 23);
+		contentPane.add(btnJugar);
 
-		JLabel lblFondo = new JLabel("New label");
-		lblFondo.setIcon(new ImageIcon("C:\\Users\\Carlos\\Downloads\\1191374 (1) (1).jpg"));
-		lblFondo.setBounds(0, 0, 607, 537);
-		contentPane.add(lblFondo);
+		
 	}
 }
