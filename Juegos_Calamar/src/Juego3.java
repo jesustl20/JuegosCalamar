@@ -193,21 +193,21 @@ public class Juego3 extends JFrame {
 								lbl11.setText("");
 								lbl12.setText("");
 								btn5.setEnabled(true);
-								tf4.setEnabled(true);
+								tf5.setEnabled(true);
 								btn4.setEnabled(false);
 								tf4.setEnabled(false);
 							} else if(numero == 2 && numeroAleatorio3 == 2) {
 								lbl10.setText("");
 								lbl12.setText("");
 								btn5.setEnabled(true);
-								tf4.setEnabled(true);
+								tf5.setEnabled(true);
 								btn4.setEnabled(false);
 								tf4.setEnabled(false);
 							} else if(numero == 3 && numeroAleatorio3 == 3) {
 								lbl10.setText("");
 								lbl11.setText("");
 								btn5.setEnabled(true);
-								tf4.setEnabled(true);
+								tf5.setEnabled(true);
 								btn4.setEnabled(false);
 								tf4.setEnabled(false);
 							} else {

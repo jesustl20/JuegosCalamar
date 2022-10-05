@@ -8,6 +8,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 import java.awt.Toolkit;
+import java.awt.Window;
 import java.io.File;
 
 import javax.swing.JLabel;
@@ -20,7 +21,7 @@ import java.awt.CardLayout;
 public class Interfaz extends JFrame {
 
 	private BackgroundPanel contentPane;
-	
+	static Interfaz frame = new Interfaz();
 
 	/**
 	 * Launch the application.
@@ -29,7 +30,7 @@ public class Interfaz extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Interfaz frame = new Interfaz();
+					
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -59,6 +60,8 @@ public class Interfaz extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				Juego1 juego1=new Juego1();
 				juego1.setVisible(true);
+				frame.setVisible(false);
+				
 				
 				
 			}

@@ -18,7 +18,7 @@ public class Juego1 extends JFrame {
 	private JPanel contentPane;
 	private JTextField tfNumero;
 	private int numeroAleatorio=1+(int)(Math.random()*50);
-	
+
 
 	/**
 	 * Launch the application.
@@ -27,8 +27,8 @@ public class Juego1 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Juego1 frame = new Juego1();
-					frame.setVisible(true);
+					 Juego1 frame1 = new Juego1();
+					frame1.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -53,6 +53,7 @@ public class Juego1 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				Juego2 juego2=new Juego2();
 				juego2.setVisible(true);
+				
 				
 			}
 		});

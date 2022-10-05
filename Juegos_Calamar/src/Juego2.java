@@ -20,6 +20,7 @@ public class Juego2 extends JFrame {
 	private JPanel contentPane;
 	private JTextField tfPares;
 	private int numeroAleatorio=1+(int)(Math.random()*10);
+	
 
 	/**
 	 * Launch the application.
@@ -75,6 +76,7 @@ public class Juego2 extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				Juego3 juego3=new Juego3();
 				juego3.setVisible(true);
+				
 			}
 		});
 		btnSiguiente.setEnabled(false);
